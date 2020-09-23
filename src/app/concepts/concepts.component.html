@@ -68,6 +68,30 @@
     <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">
       <h2>Directives</h2>
 
+      <pre>
+        Directives
+        ---
+          Spl instructions to the DOM 
+          1. Attribute Directives
+              ngClass, ngStyle, 
+          2. Structural Directives
+              *ngIf, *ngFor, ngSwitch 
+          3. Custom Attribute Directives
+          4. Custom Structural Directives
+      </pre>
+
+      <h2>*ngIf</h2>
+
+      <div class="alert alert-success" *ngIf="isLoggedIn">
+        Login Successful
+      </div>
+
+      <div class="alert alert-danger" *ngIf="!isLoggedIn">
+        Pls login
+      </div>
+
+      <!-- todo: try *ngIf with else -->
+
 
     </div>
 

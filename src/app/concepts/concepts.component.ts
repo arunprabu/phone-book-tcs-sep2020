@@ -13,7 +13,7 @@ export class ConceptsComponent implements OnInit {
 
   // property binding related
   companyName = 'TCS';
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   // two way binding -- related
   courseName = 'Angular';
