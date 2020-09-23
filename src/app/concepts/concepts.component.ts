@@ -29,4 +29,9 @@ export class ConceptsComponent implements OnInit {
     // todo: disabling the button on click in js
     // todo: change the button label from 'Click Me' to 'Clicked'
   }
+
+  profileLoadedHandler(event){
+    console.log('Inside profileLoadedHandler -- after event emitted with data');
+    console.log(event);
+  }
 }
