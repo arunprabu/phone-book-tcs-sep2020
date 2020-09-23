@@ -1,0 +1,66 @@
+Angular Animations
+----
+
+Step 1:
+in app.module.ts, 
+  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+  and then add it under imports section of @NgModule()
+
+Step 2: Define animation in the component 
+
+  import { state, transition, trigger } from '@angular/animations';
+
+  @Component({
+    ...,
+    ...,
+    ...,
+    // animations -- a property 
+    animations: [   
+      // register many triggers if we want 
+      // trigger will have a name and implementation 
+      trigger('fadeIn', [
+        // helper functions will come here 
+        // void => * wildcard 
+        transition('void => *', [  
+          style( {backgroundColor: 'blue', opacity: 0}),
+          animate(2000, style({ backgroundColor: 'green', opacity: 1}))
+        ])
+      ])
+    ]
+  })
+
+
+  fadeIn trigger can be applied in dom element
+
+Step 3: apply the animation trigger in dom element 
+  <div @fadeIn></div>
+
+Step 4: apply necessary polyfills if you want the same animation in IE/Edge Safari browsers. 
+  refer polyfills.ts 
+
+
+For more Refer: 
+https://angular.io/guide/animations
+https://angular.io/guide/transition-and-triggers
+
+
+
+
+animations: [   
+  // register many triggers if we want
+  // trigger will have a name and implementation
+  trigger('fadeIn', [
+    // helper functions will come here
+    transition('void => *', [
+      style( {backgroundColor: 'blue', opacity: 0}),
+      animate(2000, style({ backgroundColor: 'green', opacity: 1}))
+    ])
+  ]),
+  trigger('fadeOut', [
+    transition('* => void', [
+      animate ('2s',
+        style ({ opacity: '0' }),
+      ),
+    ])
+  ])
+]

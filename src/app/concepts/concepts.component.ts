@@ -13,10 +13,20 @@ export class ConceptsComponent implements OnInit {
 
   // property binding related
   companyName = 'TCS';
+  isLoggedIn = false;
+
+  // two way binding -- related
+  courseName = 'Angular';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  clickMeHandler(event): void{
+    alert('clicked');
+    console.log(event);
+    // todo: disabling the button on click in js
+    // todo: change the button label from 'Click Me' to 'Clicked'
+  }
 }
