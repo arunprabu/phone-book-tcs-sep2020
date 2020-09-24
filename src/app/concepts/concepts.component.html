@@ -128,16 +128,29 @@
       
       <p>Custom Pipe - ng g p shared/pipes/ellipsis</p>
       <p>{{dummyText}}</p>
-      <p>{{dummyText | ellipsis }}</p> -->
+      <p>{{dummyText | ellipsis }}</p>
       <!-- parameterized pipe -->
       <p>{{dummyText | ellipsis: 20 }}</p> 
       <!-- parameterized pipe -->
       <p>{{dummyText | ellipsis: 40 }}</p>
       <hr>
+
+      <h4>Pure and Impure Pipe Demo</h4>
+      <p>{{frameworksList}}</p>
+      <button (click)="addFrameworkHandler()">Add Framework</button>
+      <p>{{frameworksList | updateArray}}</p>
+
+
       
     </div>
 
 
 
   </div>
+</div>
+
+
+<hr>
+<div class="container">
+  <app-weather></app-weather>
 </div>

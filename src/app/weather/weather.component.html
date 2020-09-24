@@ -1,0 +1,8 @@
+<h2>Weather Updates | Demo </h2>
+<div class="card">
+  <div class="card-body" *ngIf="weatherData">
+    <h5 class="card-title">Temperature in {{weatherData.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{weatherData.main.temp}} C</h6>
+    <p class="card-text">{{weatherData.weather[0].main}}</p>
+  </div>
+</div>

@@ -84,7 +84,7 @@ Project organization
       ...
       ...
       ...
-      
+
 
 ===
 Weather API URL to hit 
@@ -103,5 +103,9 @@ Weather API key
     <p class="card-text">Cloudy</p>
   </div>
 </div>
+
+
+
+
 
 

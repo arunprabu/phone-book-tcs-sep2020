@@ -12,6 +12,9 @@ import { CpbComponent } from './concepts/cpb/cpb.component';
 import { CebComponent } from './concepts/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
+import { UpdateArrayPipe } from './shared/pipes/update-array.pipe';
+import { WeatherComponent } from './weather/weather.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Main switching box
 @NgModule({
@@ -24,11 +27,14 @@ import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
     CpbComponent,
     CebComponent,
     ColorizerDirective,
-    EllipsisPipe
+    EllipsisPipe,
+    UpdateArrayPipe,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
