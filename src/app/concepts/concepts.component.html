@@ -9,6 +9,8 @@
         aria-selected="false">Child to Parent Comp Communication</a>
       <a class="nav-item nav-link" data-toggle="tab" href="#directives-tab" role="tab" aria-controls="directives-tab"
         aria-selected="false">Directives</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#pipes-tab" role="tab" aria-controls="pipes-tab"
+        aria-selected="false">Pipes</a>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
@@ -91,10 +93,50 @@
         Pls login
       </div>
 
-      <!-- todo: try *ngIf with else -->
+      <!-- todo: try *ngIf with else in angular -->
 
+      <ul>
+        <li *ngFor="let skill of skillsList">{{skill}}</li>
+      </ul>
+
+      <!-- todo: find index in above *ngFor -->
+      
+      <!-- todo: try ngSwitch in angular  -->
+
+      <p>Custom Directives</p>
+      <p>Custom Attribute Directive</p>
+      <pre>ng g d concepts/directives/colorizer</pre>
+
+      <!-- custom attribute directive -->
+      <div appColorizer>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+      <div appColorizer>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+
+      <!-- todo: custom structural directive -->
+      <pre>ng g d delay</pre>
 
     </div>
+
+    <div class="tab-pane fade" id="pipes-tab" role="tabpanel" aria-labelledby="pipes-tab">
+      <h2>Pipes</h2>
+      <pre>Utilities to transform information from one format to another</pre>
+      <p>{{dummyText}}</p>
+      <p>{{dummyText | uppercase }}</p>
+      <p>{{today}}</p>
+      <p>{{today | date }}</p>
+      <p>{{today | date: 'dd/MM/yyyy' }}</p> <!-- parameterized pipe -->
+      <p>{{today | date: 'dd, MMMM yyyy hh:mm:ss a' | uppercase }}</p> <!-- chaining pipes -->
+      
+      <p>Custom Pipe - ng g p shared/pipes/ellipsis</p>
+      <p>{{dummyText}}</p>
+      <p>{{dummyText | ellipsis }}</p> -->
+      <!-- parameterized pipe -->
+      <p>{{dummyText | ellipsis: 20 }}</p> 
+      <!-- parameterized pipe -->
+      <p>{{dummyText | ellipsis: 40 }}</p>
+      <hr>
+      
+    </div>
+
 
 
   </div>

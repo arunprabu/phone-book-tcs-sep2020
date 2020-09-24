@@ -10,6 +10,8 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { ConceptsComponent } from './concepts/concepts.component';
 import { CpbComponent } from './concepts/cpb/cpb.component';
 import { CebComponent } from './concepts/ceb/ceb.component';
+import { ColorizerDirective } from './concepts/directives/colorizer.directive';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 // Main switching box
 @NgModule({
@@ -20,7 +22,9 @@ import { CebComponent } from './concepts/ceb/ceb.component';
     MenuComponent,
     ConceptsComponent,
     CpbComponent,
-    CebComponent
+    CebComponent,
+    ColorizerDirective,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,

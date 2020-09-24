@@ -18,6 +18,14 @@ export class ConceptsComponent implements OnInit {
   // two way binding -- related
   courseName = 'Angular';
 
+  // *ngFor related
+  skillsList: string[] = [ 'html', 'css', 'js', 'nodejs' ];
+
+  // pipes related
+  dummyText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+  today = new Date();
+  frameworksList: string[] = ['ng', 'react'];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -33,5 +41,10 @@ export class ConceptsComponent implements OnInit {
   profileLoadedHandler(event){
     console.log('Inside profileLoadedHandler -- after event emitted with data');
     console.log(event);
+  }
+
+  addFrameworkHandler(){
+    this.frameworksList.push('VueJS');
+    console.log(this.frameworksList);
   }
 }

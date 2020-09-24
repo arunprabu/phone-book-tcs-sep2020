@@ -64,3 +64,44 @@ animations: [
     ])
   ])
 ]
+
+Project organization
+---
+  src/
+    app/
+      shared/
+        header/
+        footer/
+        menu/
+      concepts/
+        cpb/
+      auth/
+        signup/
+        signin/
+        reset-pw/
+      reports/
+      dashboard/
+      ...
+      ...
+      ...
+      
+
+===
+Weather API URL to hit 
+https://api.openweathermap.org/data/2.5/weather?q=Washington&units=metric&appid=92fdf1aa21d318a1610df2a1fff03819
+
+
+Weather API key 
+92fdf1aa21d318a1610df2a1fff03819
+
+
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Temperature in Sydney</h5>
+    <h6 class="card-subtitle mb-2 text-muted">32 C</h6>
+    <p class="card-text">Cloudy</p>
+  </div>
+</div>
+
+
