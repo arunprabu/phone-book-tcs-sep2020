@@ -24,11 +24,12 @@ export class WeatherComponent implements OnInit {
 
     // 1.2 then send the req to service
     this.weatherService.getWeatherUpdates()
-      .subscribe( (res: any) => { // 2. get the res from the service
+      .subscribe((res: any) => {
         console.log(res);
         this.weatherData = res;
       });
-    
+
+    // work on unsubscribe later
   }
 
 }

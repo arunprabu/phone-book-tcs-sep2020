@@ -15,6 +15,12 @@ import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 import { UpdateArrayPipe } from './shared/pipes/update-array.pipe';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { AddContactComponent } from './contacts/add-contact/add-contact.component';
+import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 // Main switching box
 @NgModule({
@@ -29,12 +35,18 @@ import { HttpClientModule } from '@angular/common/http';
     ColorizerDirective,
     EllipsisPipe,
     UpdateArrayPipe,
-    WeatherComponent
+    WeatherComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactsComponent,
+    AddContactComponent,
+    ContactDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule, // needed for HttpClient to work
     AppRoutingModule
   ],
   providers: [],

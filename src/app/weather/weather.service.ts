@@ -22,6 +22,7 @@ export class WeatherService {
     return this.http.get(this.REST_API_URL)
         .pipe( map((res: any) => { // 3. get the res from the rest api
           console.log(res);
+          // ideal place for filter, sort, remove, convert
           return res; // 4. send it back to the comp
         }));
   }
