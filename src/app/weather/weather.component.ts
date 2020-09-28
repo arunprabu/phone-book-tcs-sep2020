@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { WeatherService } from './weather.service';
 
 @Component({
@@ -7,10 +8,10 @@ import { WeatherService } from './weather.service';
   styles: [
   ]
 })
-export class WeatherComponent implements OnInit {
-
+export class WeatherComponent implements OnInit, OnDestroy {
 
   weatherData: any;
+  weatherSubscription: Subscription;
 
   // 1. send the req to the service
     // 1.1 connect to the service using dep injection
@@ -23,13 +24,17 @@ export class WeatherComponent implements OnInit {
     // ideal place for you to send ajax calls
 
     // 1.2 then send the req to service
-    this.weatherService.getWeatherUpdates()
+    this.weatherSubscription = this.weatherService.getWeatherUpdates()
       .subscribe((res: any) => {
         console.log(res);
         this.weatherData = res;
       });
-
-    // work on unsubscribe later
   }
 
+  ngOnDestroy(){
+    // when the comp goes out of the view
+    console.log('Inside ngOnDestroy');
+    // ideal place for unsubscription, clear the object, empty array, clear intervals
+    this.weatherSubscription.unsubscribe();
+  }
 }
