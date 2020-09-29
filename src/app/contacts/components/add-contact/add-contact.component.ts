@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactService } from '../../services/contact.service';
 
@@ -22,15 +22,16 @@ export class AddContactComponent implements OnInit {
     // Step 1 continues...
     this.contactForm = new FormGroup({
       // Step 2: Create form field equivalent in ts
-      name: new FormControl(),
-      phone: new FormControl(),
-      email: new FormControl()
+      name: new FormControl('', Validators.required), // Step 7: work on validation
+      phone: new FormControl('', [Validators.required, Validators.minLength(10)]),     // step 8 ref HTML to display validation error
+      email: new FormControl('', [Validators.required, Validators.email])
       // Step 3: go to html for step 3
     });
   }
 
+  // step 6 - have the handler
   addContactHandler(){
-    console.log(this.contactForm);
+    console.log(this.contactForm); // the form's entire state
     console.log(this.contactForm.value);
     this.contactService.createContact(this.contactForm.value)
       .subscribe( (res: any) => {

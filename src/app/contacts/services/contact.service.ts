@@ -17,7 +17,7 @@ export class ContactService {
 
     // Method: POST
     return this.http.post(this.REST_API_URL, contactData)
-      .pipe(map((res: any) => { // get resp from rest api 
+      .pipe(map((res: any) => { // get resp from rest api
         console.log(res);
         return res;
       }));
@@ -32,8 +32,9 @@ export class ContactService {
       }));
   }
 
-  getContact(){
-    return this.http.get(this.REST_API_URL +  '/1')
+  getContact(id){
+    console.log(id);
+    return this.http.get(this.REST_API_URL +  '/' + id)
       .pipe(map( (res: any) => {
         console.log(res);
         return res;
