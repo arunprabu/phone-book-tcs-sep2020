@@ -32,9 +32,10 @@ export class ContactDetailsComponent implements OnInit {
 
   updateHandler(formData){
     console.log(formData); // state of the Contact Form
+
     console.log(formData.value);
 
-    // send the data to the service layer
+    // TODO: send the data to the service layer
     this.isUpdated = true;
   }
 
