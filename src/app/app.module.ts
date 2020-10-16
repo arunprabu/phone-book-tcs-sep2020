@@ -21,6 +21,7 @@ import { ContactsComponent } from './contacts/components/contacts.component';
 import { AddContactComponent } from './contacts/components/add-contact/add-contact.component';
 import { ContactDetailsComponent } from './contacts/components/contact-details/contact-details.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { LoginComponent } from './auth/login/login.component';
 
 // Main switching box
 @NgModule({
@@ -41,7 +42,8 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
     ContactsComponent,
     AddContactComponent,
     ContactDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
